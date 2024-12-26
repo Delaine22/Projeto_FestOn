@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/preto"
+    tools:context=".MainActivity">
+
+
+
+    <ScrollView
+        android:id="@+id/mainScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavBar">
+
+    <!-- Grupo com ícone de localização e texto -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/locationGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp">
+
+
+
+        <!-- Texto da localização (Lisbon) -->
+        <ImageView
+            android:id="@+id/locationIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="4dp"
+            android:src="@drawable/location_on_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.009" />
+
+
+
+        <!--TEXTO NO TOPO (LISBOA)-->
+        <TextView
+            android:id="@+id/locationText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:fontFamily="serif-monospace"
+            android:text="Lisbon"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/locationIcon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.01" />
+
+         <!--ICONE MAPA NO TOPO-->
+        <ImageView
+        android:id="@+id/mapIcon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="36dp"
+        android:src="@drawable/outline_map_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!-- ICONE DE CORACAO NO TOPO-->
+        <ImageView
+        android:id="@+id/heartIcon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/rounded_heart_check_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/mapIcon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.001" />
+
+    <!-- DATA DO EVENTO-->
+        <TextView
+        android:id="@+id/todayTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="88dp"
+        android:text="TODAY"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+        <!--IMAGEM DE FESTA(PRIMEIRO IMAGEM-->
+        <ImageView
+            android:id="@+id/eventImage1"
+            android:layout_width="388dp"
+            android:layout_height="185dp"
+            android:layout_marginTop="20dp"
+            android:contentDescription="Imagem do evento"
+            android:scaleType="centerCrop"
+            android:src="@drawable/party1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/todayTitle" />
+
+         <!--DETALHES DO EVENTO(EVENTO1)-->
+        <TextView
+        android:id="@+id/eventDetails1"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="serif-monospace"
+        android:lineSpacingExtra="4dp"
+        android:text="Gsaid • Thisisthx • Sub/  \nMonday 23 Dec\nLisboa Rio Club"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.265"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/eventImage1" />
+
+         <!--HORA, DATA E PRECO DO EVENTO1-->
+        <TextView
+        android:id="@+id/eventAdditionalInfo1"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="serif-monospace"
+        android:text="Today | 11:59 PM  €10.00"
+        android:textColor="#FF5722"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.265"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/eventDetails1" />
+         <!--ICONE (LIKE)-->
+        <ImageView
+            android:id="@+id/likeButton1"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/rounded_heart_check_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/eventAdditionalInfo1" />
+
+                        <!--////////////////////////////SEGUNDO EVENTO-->
+        <!-- DATA DO EVENTO-->
+        <TextView
+            android:id="@+id/JaneiroEvente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="508dp"
+            android:text="10 Jan"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--IMAGEM DE FESTA(SEGUNDA IMAGEM)-->
+        <ImageView
+            android:id="@+id/eventImage2"
+            android:layout_width="388dp"
+            android:layout_height="185dp"
+            android:layout_marginTop="20dp"
+            android:contentDescription="Imagem do evento"
+            android:scaleType="centerCrop"
+            android:src="@drawable/party2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/JaneiroEvente" />
+
+        <!--DETALHES DO EVENTO(EVENTO2)-->
+        <TextView
+        android:id="@+id/eventDetails2"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="serif-monospace"
+        android:lineSpacingExtra="4dp"
+        android:text="Gsaid • Thisisthx • Sub/  \nMonday 10 Jan\nLisboa Rio Club"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.265"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/eventImage2" />
+
+        <!--HORA, DATA E PRECO DO EVENTO2-->
+        <TextView
+        android:id="@+id/eventAdditionalInfo2"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="serif-monospace"
+        android:text="10 jan | 11:59 PM  €10.00"
+        android:textColor="#FF5722"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.265"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/eventDetails2" />
+
+        <!--ICONE (LIKE)-->
+        <ImageView
+            android:id="@+id/likeButton2"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/rounded_heart_check_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/eventAdditionalInfo2" />
+
+        <!--///////////////////////////////////////////////////////////////////-->
+        <!-- DATA DO EVENTO-->
+        <TextView
+        android:id="@+id/FevereiroEvente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="940dp"
+        android:text="15 Fev"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+        <!--IMAGEM DE FESTATERCEIRA IMAGEM)-->
+        <ImageView
+            android:id="@+id/eventImage3"
+            android:layout_width="388dp"
+            android:layout_height="185dp"
+            android:layout_marginTop="20dp"
+            android:contentDescription="Imagem do evento"
+            android:scaleType="centerCrop"
+            android:src="@drawable/party3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/FevereiroEvente" />
+
+        <!--DETALHES DO EVENTO(EVENTO3)-->
+        <TextView
+            android:id="@+id/eventDetails3"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="serif-monospace"
+            android:lineSpacingExtra="4dp"
+            android:text="Gsaid • Thisisthx • Sub/ \nMonday 5 Fev\ Lisboa Rio Club"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.267"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/eventImage3" />
+
+        <!--HORA, DATA E PRECO DO EVENTO3-->
+        <TextView
+            android:id="@+id/eventAdditionalInfo3"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="serif-monospace"
+            android:text="15 Fev | 11:59 PM  €10.00"
+            android:textColor="#FF5722"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.267"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/eventDetails3" />
+
+        <!--ICONE (LIKE)-->
+        <ImageView
+            android:id="@+id/likeButton3"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/rounded_heart_check_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/eventAdditionalInfo3" />
+
+
+        <!--///////////////////////////////////////////////////////////////////-->
+        <!-- DATA DO EVENTO-->
+        <TextView
+        android:id="@+id/MarcoEvente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="1344dp"
+        android:text="7 March"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+        <!--IMAGEM DE FESTA(QUARTA IMAGEM)-->
+        <ImageView
+            android:id="@+id/eventImage4"
+            android:layout_width="388dp"
+            android:layout_height="185dp"
+            android:layout_marginTop="20dp"
+            android:contentDescription="Imagem do evento"
+            android:scaleType="centerCrop"
+            android:src="@drawable/party4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/MarcoEvente" />
+
+        <!--DETALHES DO EVENTO(EVENTO4)-->
+        <TextView
+        android:id="@+id/eventDetails4"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="serif-monospace"
+        android:lineSpacingExtra="4dp"
+        android:text="Gsaid • Thisisthx • Sub/  \nMonday 5 Fev\ Lisboa Rio Club"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.265"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/eventImage4" />
+
+        <!--HORA, DATA E PRECO DO EVENTO4-->
+        <TextView
+        android:id="@+id/eventAdditionalInfo4"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="serif-monospace"
+        android:text="7 Marc | 11:59 PM  €10.00"
+        android:textColor="#FF5722"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.265"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/eventDetails4" />
+
+        <!--ICONE (LIKE)-->
+        <ImageView
+            android:id="@+id/likeButton4"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/rounded_heart_check_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/eventAdditionalInfo4" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <!-- Barra de navegação fixa -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottomNavBar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginBottom="4dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="3dp">
+
+        <!--ICONE HOME-->
+        <ImageView
+            android:id="@+id/homeBtn"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="12dp"
+            android:src="@drawable/outline_home_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!--ICONE SEARCH-->
+        <ImageView
+            android:id="@+id/searchBtn"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="76dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/outline_search_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/homeBtn"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.888" />
+
+        <!--ICONE AGENDA-->
+        <ImageView
+            android:id="@+id/agendaBtn"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginEnd="68dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/outline_view_agenda_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/profileBtn" />
+
+        <!--ICONE PROFILE-->
+        <ImageView
+            android:id="@+id/profileBtn"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="12dp"
+            android:src="@drawable/outline_person_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
