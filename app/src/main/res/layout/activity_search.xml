@@ -5,6 +5,312 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/preto"
     tools:context=".SearchActivity">
+
+    <!-- Barra de Pesquisa -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/search_bar"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/cinza_escuro"
+        app:cardCornerRadius="25dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:gravity="center_vertical">
+
+            <!-- Ícone de Pesquisa -->
+            <ImageView
+                android:id="@+id/search_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/outline_search_24"
+                app:tint="@color/cinza_claro"/>
+
+            <!-- Campo de Pesquisa -->
+            <EditText
+                android:id="@+id/search_input"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:hint="Search for an event, artist or venue"
+                android:background="@android:color/transparent"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#B3B3B3"
+                android:inputType="text"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@id/search_icon"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!--"Recently Viewed" -->
+    <TextView
+        android:id="@+id/recently_viewed_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="28dp"
+        android:text="RECENTLY VIEWED"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search_bar" />
+
+
+    <!-- Card do Evento 1 -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/recent_View_event_card1"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/black"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintTop_toBottomOf="@id/recently_viewed_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="96dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!-- Imagem do Evento -->
+            <ImageView
+                android:id="@+id/event_view1"
+                android:layout_width="67dp"
+                android:layout_height="66dp"
+                android:layout_marginStart="10dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/event1" />
+
+            <!-- Informações do Evento -->
+            <LinearLayout
+                android:layout_width="251dp"
+                android:layout_height="47dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <!-- Nome do Evento -->
+                <TextView
+                    android:id="@+id/event1_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fs Green"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <!-- Data e Local -->
+                <TextView
+                    android:id="@+id/event1_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Sat 11 Jan 2025    DOCK B | Pantin"
+                    android:textColor="@color/abobora"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView> <!--FIM DO EVENT CARD 1-->
+
+    <!-- Card do Evento 2 -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/recent_View_event_card2"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/black"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintTop_toBottomOf="@id/recent_View_event_card1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="96dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!-- Imagem do Evento -->
+            <ImageView
+                android:id="@+id/event_view2"
+                android:layout_width="67dp"
+                android:layout_height="66dp"
+                android:layout_marginStart="10dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/event2" />
+
+            <!-- Informações do Evento -->
+            <LinearLayout
+                android:layout_width="251dp"
+                android:layout_height="47dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <!-- Nome do Evento -->
+                <TextView
+                    android:id="@+id/event2_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fs Green"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <!-- Data e Local -->
+                <TextView
+                    android:id="@+id/event2_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Sat 8 Feb 2025    DOCK B | Pantin"
+                    android:textColor="@color/abobora"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView> <!--FIM DO EVENT CARD 2-->
+
+    <!-- Card do Evento 3 -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/recent_View_event_card3"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/black"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintTop_toBottomOf="@id/recent_View_event_card2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="96dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!-- Imagem do Evento -->
+            <ImageView
+                android:id="@+id/event_view3"
+                android:layout_width="67dp"
+                android:layout_height="66dp"
+                android:layout_marginStart="10dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/event3" />
+
+            <!-- Informações do Evento -->
+            <LinearLayout
+                android:layout_width="251dp"
+                android:layout_height="47dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <!-- Nome do Evento -->
+                <TextView
+                    android:id="@+id/event3_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fs Green"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <!-- Data e Local -->
+                <TextView
+                    android:id="@+id/event3_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Sat 22 Feb 2025    DOCK B | Pantin"
+                    android:textColor="@color/abobora"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView> <!--FIM DO EVENT 3-->
+
+    <!-- Barra de navegação fixa -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottomNavBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="4dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="3dp">
+
+        <!--ICONE HOME-->
+        <ImageView
+            android:id="@+id/homeBtn"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="12dp"
+            android:src="@drawable/outline_home_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!--ICONE SEARCH-->
+        <ImageView
+            android:id="@+id/searchBtn"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="76dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/outline_search_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/homeBtn"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.888" />
+
+        <!--ICONE AGENDA-->
+        <ImageView
+            android:id="@+id/agendaBtn"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginEnd="68dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/outline_view_agenda_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/profileBtn" />
+
+        <!--ICONE PROFILE-->
+        <ImageView
+            android:id="@+id/profileBtn"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="12dp"
+            android:src="@drawable/outline_person_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout> <!--FIM DA BARRA DE NAVEGACAO-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
