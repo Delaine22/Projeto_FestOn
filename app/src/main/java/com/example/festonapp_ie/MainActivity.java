@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        // BTN HOME
+        // FUNCAO ONCLICK NO ICONE HOME
         ImageView btnHome = findViewById(R.id.homeBtn);
         btnHome.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // BTN SEARCH
+        // BTN SEARCH (FUNCAO ON CLICK NO ICONE SEARCH)
         ImageView btnSearch = findViewById(R.id.searchBtn);
         btnSearch.setOnClickListener(new View.OnClickListener(){
             @Override

@@ -4,4 +4,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="preto">#1a1a1a</color>
     <color name="cinza_escuro">#454444</color>
+    <color name="cinza_claro">#B3B3B3</color>
+    <color name="abobora">#FF5722</color>
 </resources>
